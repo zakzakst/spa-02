@@ -29,8 +29,11 @@
     "@storybook/vue": "^6.0.20",
     "babel-loader": "^8.1.0",
     "core-js": "^3.6.5",
+    "css-loader": "^4.2.2",
     "node-sass": "^4.14.1",
     "react-is": "^16.13.1",
-    "sass-loader": "^10.0.1"
+    "sass-loader": "^10.0.1",
+    "sass-resources-loader": "^2.1.0",
+    "style-loader": "^1.2.1"
   }
 }
