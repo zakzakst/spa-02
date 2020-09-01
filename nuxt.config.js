@@ -29,9 +29,9 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/css/normalize.css',
-    '@/assets/sass/bulma-customize.scss',
-    '@/assets/sass/common.scss',
+    '@/assets/css/_normalize.css',
+    '@/assets/sass/_bulma-customize.scss',
+    '@/assets/sass/_common.scss',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -59,7 +59,7 @@ export default {
   ],
   styleResources: {
     scss: [
-      '@/assets/sass/variable.scss'
+      '@/assets/sass/_variables.scss'
     ]
   },
   /*
