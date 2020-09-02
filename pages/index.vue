@@ -13,8 +13,16 @@
       <ripple-btn link="/path">テスト</ripple-btn>
     </div> -->
 
-    <div style="display: flex; justify-content: flex-end; padding: 8px">
+    <!-- <div style="display: flex; justify-content: flex-end; padding: 8px">
       <search-btn placeholder="検索キーワード" />
+    </div> -->
+
+    <div style="padding: 8px">
+      <skeleton-loader skeleton-type="img" />
+      <skeleton-loader skeleton-type="heading" />
+      <skeleton-loader skeleton-type="text" />
+      <skeleton-loader skeleton-type="text" />
+      <skeleton-loader skeleton-type="text" />
     </div>
   </div>
 </template>
@@ -23,14 +31,16 @@
 // import FloatBtn from '@/components/FloatBtn'
 // import RippleImg from '@/components/RippleImg'
 // import RippleBtn from '@/components/RippleBtn'
-import SearchBtn from '@/components/SearchBtn'
+// import SearchBtn from '@/components/SearchBtn'
+import SkeletonLoader from '@/components/SkeletonLoader'
 
 export default {
   components: {
     // FloatBtn,
     // RippleImg,
     // RippleBtn,
-    SearchBtn,
+    // SearchBtn,
+    SkeletonLoader,
   },
 }
 </script>
