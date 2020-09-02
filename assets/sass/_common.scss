@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 button {
   border: none;
   cursor: pointer;
@@ -5,7 +8,6 @@ button {
     outline: none;
   }
 }
-
 img, iframe {
   vertical-align: bottom;
 }
