@@ -17,12 +17,17 @@
       <search-btn placeholder="検索キーワード" />
     </div> -->
 
-    <div style="padding: 8px">
+    <!-- <div style="padding: 8px">
       <skeleton-loader skeleton-type="img" />
       <skeleton-loader skeleton-type="heading" />
       <skeleton-loader skeleton-type="text" />
       <skeleton-loader skeleton-type="text" />
       <skeleton-loader skeleton-type="text" />
+    </div> -->
+
+    <div style="width:200px; padding: 8px">
+      <check-mark ref="checkMark" />
+      <button @click="animCheckMark">test</button>
     </div>
   </div>
 </template>
@@ -32,7 +37,8 @@
 // import RippleImg from '@/components/RippleImg'
 // import RippleBtn from '@/components/RippleBtn'
 // import SearchBtn from '@/components/SearchBtn'
-import SkeletonLoader from '@/components/SkeletonLoader'
+// import SkeletonLoader from '@/components/SkeletonLoader'
+import CheckMark from '@/components/CheckMark'
 
 export default {
   components: {
@@ -40,7 +46,13 @@ export default {
     // RippleImg,
     // RippleBtn,
     // SearchBtn,
-    SkeletonLoader,
+    // SkeletonLoader,
+    CheckMark,
   },
+  methods: {
+    animCheckMark() {
+      this.$refs.checkMark.animCheckMark();
+    }
+  }
 }
 </script>

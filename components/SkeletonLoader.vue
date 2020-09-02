@@ -5,12 +5,6 @@
 <script>
 export default {
   props: ['skeletonType'],
-  data() {
-    return {
-    }
-  },
-  methods: {
-  },
 }
 </script>
 
