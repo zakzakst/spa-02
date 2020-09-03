@@ -25,19 +25,20 @@
       <skeleton-loader skeleton-type="text" />
     </div> -->
 
-    <!-- <div style="width:200px; padding: 8px">
+    <div style="width:160px; padding: 8px">
       <check-mark ref="checkMark" />
-      <button @click="animCheckMark">test</button>
-    </div> -->
+      <button @click="animLoadDone">load done</button>
+      <button @click="animCheckMarkLoading">Loading</button>
+    </div>
 
     <!-- <div style="width:200px; padding: 8px">
       <favorite-icon-star />
       <favorite-icon-star />
     </div> -->
 
-    <div style="width:200px; padding: 8px">
+    <!-- <div style="width:200px; padding: 8px">
       <favorite-icon-heart />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -47,9 +48,9 @@
 // import RippleBtn from '@/components/RippleBtn'
 // import SearchBtn from '@/components/SearchBtn'
 // import SkeletonLoader from '@/components/SkeletonLoader'
-// import CheckMark from '@/components/CheckMark'
+import CheckMark from '@/components/CheckMark'
 // import FavoriteIconStar from '@/components/FavoriteIconStar'
-import FavoriteIconHeart from '@/components/FavoriteIconHeart'
+// import FavoriteIconHeart from '@/components/FavoriteIconHeart'
 
 export default {
   data() {
@@ -62,13 +63,16 @@ export default {
     // RippleBtn,
     // SearchBtn,
     // SkeletonLoader,
-    // CheckMark,
+    CheckMark,
     // FavoriteIconStar,
-    FavoriteIconHeart,
+    // FavoriteIconHeart,
   },
   methods: {
-    animCheckMark() {
-      this.$refs.checkMark.animCheckMark();
+    animLoadDone() {
+      this.$refs.checkMark.loadDone();
+    },
+    animCheckMarkLoading() {
+      this.$refs.checkMark.animLoading();
     },
   }
 }
