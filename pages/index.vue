@@ -25,11 +25,11 @@
       <skeleton-loader skeleton-type="text" />
     </div> -->
 
-    <div style="width:160px; padding: 8px">
+    <!-- <div style="width:160px; padding: 8px">
       <check-mark ref="checkMark" />
       <button @click="animLoadDone">load done</button>
       <button @click="animCheckMarkLoading">Loading</button>
-    </div>
+    </div> -->
 
     <!-- <div style="width:200px; padding: 8px">
       <favorite-icon-star />
@@ -39,6 +39,11 @@
     <!-- <div style="width:200px; padding: 8px">
       <favorite-icon-heart />
     </div> -->
+
+    <div class="container">
+      <tab-contents />
+    </div>
+    <div style="height: 300px;background: #eee"></div>
   </div>
 </template>
 
@@ -48,9 +53,10 @@
 // import RippleBtn from '@/components/RippleBtn'
 // import SearchBtn from '@/components/SearchBtn'
 // import SkeletonLoader from '@/components/SkeletonLoader'
-import CheckMark from '@/components/CheckMark'
+// import CheckMark from '@/components/CheckMark'
 // import FavoriteIconStar from '@/components/FavoriteIconStar'
 // import FavoriteIconHeart from '@/components/FavoriteIconHeart'
+import TabContents from '@/components/TabContents'
 
 export default {
   data() {
@@ -63,9 +69,10 @@ export default {
     // RippleBtn,
     // SearchBtn,
     // SkeletonLoader,
-    CheckMark,
+    // CheckMark,
     // FavoriteIconStar,
     // FavoriteIconHeart,
+    TabContents,
   },
   methods: {
     animLoadDone() {
@@ -77,3 +84,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.container {
+  padding: 8px;
+}
+</style>
