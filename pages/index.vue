@@ -30,9 +30,13 @@
       <button @click="animCheckMark">test</button>
     </div> -->
 
+    <!-- <div style="width:200px; padding: 8px">
+      <favorite-icon-star />
+      <favorite-icon-star />
+    </div> -->
+
     <div style="width:200px; padding: 8px">
-      <favorite-icon-star is-active="true" />
-      <favorite-icon-star is-active="" />
+      <favorite-icon-heart />
     </div>
   </div>
 </template>
@@ -44,9 +48,14 @@
 // import SearchBtn from '@/components/SearchBtn'
 // import SkeletonLoader from '@/components/SkeletonLoader'
 // import CheckMark from '@/components/CheckMark'
-import FavoriteIconStar from '@/components/FavoriteIconStar'
+// import FavoriteIconStar from '@/components/FavoriteIconStar'
+import FavoriteIconHeart from '@/components/FavoriteIconHeart'
 
 export default {
+  data() {
+    return {
+    }
+  },
   components: {
     // FloatBtn,
     // RippleImg,
@@ -54,12 +63,13 @@ export default {
     // SearchBtn,
     // SkeletonLoader,
     // CheckMark,
-    FavoriteIconStar,
+    // FavoriteIconStar,
+    FavoriteIconHeart,
   },
   methods: {
     animCheckMark() {
       this.$refs.checkMark.animCheckMark();
-    }
+    },
   }
 }
 </script>
