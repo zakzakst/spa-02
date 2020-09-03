@@ -25,9 +25,14 @@
       <skeleton-loader skeleton-type="text" />
     </div> -->
 
-    <div style="width:200px; padding: 8px">
+    <!-- <div style="width:200px; padding: 8px">
       <check-mark ref="checkMark" />
       <button @click="animCheckMark">test</button>
+    </div> -->
+
+    <div style="width:200px; padding: 8px">
+      <favorite-icon-star is-active="true" />
+      <favorite-icon-star is-active="" />
     </div>
   </div>
 </template>
@@ -38,7 +43,8 @@
 // import RippleBtn from '@/components/RippleBtn'
 // import SearchBtn from '@/components/SearchBtn'
 // import SkeletonLoader from '@/components/SkeletonLoader'
-import CheckMark from '@/components/CheckMark'
+// import CheckMark from '@/components/CheckMark'
+import FavoriteIconStar from '@/components/FavoriteIconStar'
 
 export default {
   components: {
@@ -47,7 +53,8 @@ export default {
     // RippleBtn,
     // SearchBtn,
     // SkeletonLoader,
-    CheckMark,
+    // CheckMark,
+    FavoriteIconStar,
   },
   methods: {
     animCheckMark() {
