@@ -21,6 +21,8 @@ export default {
       circleColor: '#333',
       lineShortColor: '#333',
       lineLongColor: '#666',
+      circleLoadingSpeed: 600,
+      loaded: false,
     }
   },
   methods: {
@@ -34,12 +36,31 @@ export default {
         onStart: () => {
           this.animLine();
         }
-      }, .6);
+      }, this.circleLoadingSpeed / 1000);
+    },
+    animLoading() {
+      const strokeLength = this.circle.getTotalLength();
+      this.circle.attr({
+        strokeDashoffset: strokeLength * 3,
+      });
+      this.circle.animate({
+        strokeDashoffset: strokeLength * 2,
+      }, this.circleLoadingSpeed, mina.easeinout, () => {
+        this.circle.animate({
+          strokeDashoffset: strokeLength,
+        }, this.circleLoadingSpeed, mina.easeinout, () => {
+          if(this.loaded) {
+            this.animCheckMark();
+          } else {
+            this.animLoading();
+          }
+        });
+      });
     },
     animCircle() {
       this.circle.animate({
         strokeDashoffset: 0,
-      }, 400, mina.easeout);
+      }, this.circleLoadingSpeed, mina.easeinout);
     },
     animLine() {
       this.lineShort.animate({
@@ -57,7 +78,10 @@ export default {
         strokeDasharray: `${strokeLength} ${strokeLength}`,
         strokeDashoffset: strokeLength,
       });
-    }
+    },
+    loadDone() {
+      this.loaded = true;
+    },
   },
   mounted() {
     // 要素の設定
