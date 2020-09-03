@@ -17,9 +17,10 @@
 import gsap from 'gsap'
 
 export default {
-  props: ['isActive'],
+  // props: ['isActive'],
   data() {
     return {
+      isActive: false,
       svg: null,
       star: null,
       circles: null,
@@ -49,7 +50,6 @@ export default {
           anim: 'M33,12c1.103,0 2,0.897 2,2c0,1.104 -0.897,2 -2,2c-1.103,0 -2,-0.896 -2,-2c0,-1.103 0.897,-2 2,-2Z',
         },
       ],
-      // isActive: false,
     }
   },
   methods: {
@@ -97,7 +97,6 @@ export default {
     this.svg = Snap(this.$refs.favoriteStar);
     this.star = this.svg.select('.favorite-star__star');
     this.circles = this.svg.selectAll('.favorite-star__circle');
-    console.log(this.svg, this.star, this.circles);
   }
 }
 </script>
@@ -112,7 +111,7 @@ export default {
 }
 .favorite-star {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: -6px;
   width: 36px;
   height: 36px;
