@@ -40,10 +40,19 @@
       <favorite-icon-heart />
     </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
       <tab-contents />
     </div>
-    <div style="height: 300px;background: #eee"></div>
+    <div style="height: 300px;background: #eee"></div> -->
+
+    <!-- <div class="container">
+      <search-modal />
+    </div> -->
+
+    <div class="container">
+      <toast-bottom ref="toastBottom" />
+      <button @click="showToast">test</button>
+    </div>
   </div>
 </template>
 
@@ -56,7 +65,9 @@
 // import CheckMark from '@/components/CheckMark'
 // import FavoriteIconStar from '@/components/FavoriteIconStar'
 // import FavoriteIconHeart from '@/components/FavoriteIconHeart'
-import TabContents from '@/components/TabContents'
+// import TabContents from '@/components/TabContents'
+// import SearchModal from '@/components/SearchModal'
+import ToastBottom from '@/components/ToastBottom'
 
 export default {
   data() {
@@ -72,7 +83,9 @@ export default {
     // CheckMark,
     // FavoriteIconStar,
     // FavoriteIconHeart,
-    TabContents,
+    // TabContents,
+    // SearchModal,
+    ToastBottom,
   },
   methods: {
     animLoadDone() {
@@ -81,6 +94,9 @@ export default {
     animCheckMarkLoading() {
       this.$refs.checkMark.animLoading();
     },
+    showToast() {
+      this.$refs.toastBottom.showToast('テキストが入ります');
+    }
   }
 }
 </script>
